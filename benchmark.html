@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Benchmark | Tianjing Wang</title>
+  <meta name="description" content="Tianjing Wang — physics-guided AI for power systems, battery intelligence, and trustworthy energy systems.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+<nav>
+  <a href="index.html"><strong>Tianjing Wang</strong></a>
+  <a href="research.html">Research</a>
+  <a href="benchmark.html">Benchmark</a>
+  <a href="publications.html">Publications</a>
+  <a href="teaching.html">Teaching</a>
+  <a href="mentoring-service.html">Mentoring & Service</a>
+  <a href="cv.html">CV</a>
+  <a href="contact.html">Contact</a>
+</nav>
+</header>
+<main>
+
+<h1>TrustEnergyBench</h1>
+
+<div class="callout">
+  A public benchmark for trustworthy AI agents and physics-guided foundation-model components in critical energy systems.
+</div>
+
+<p>
+TrustEnergyBench evaluates whether AI systems for energy forecasting, emergency control, and storage dispatch can remain
+accurate, physically feasible, robust, privacy-aware, and life-aware under realistic stress conditions.
+</p>
+
+<h2>Why this benchmark?</h2>
+<p>
+Purely data-driven energy-AI models can produce outputs that violate power-flow equations, voltage/security limits,
+battery SOC/SOH boundaries, or degradation-risk budgets when operating conditions shift. TrustEnergyBench is designed
+to make those failure modes measurable, reproducible, and comparable.
+</p>
+
+<h2>Initial benchmark tracks</h2>
+
+<table>
+  <tr>
+    <th>Track</th>
+    <th>Task</th>
+    <th>Evaluation focus</th>
+  </tr>
+  <tr>
+    <td>SafeFlex</td>
+    <td>Dynamic storage flexibility and safe grid operation under contingencies, renewable uncertainty, and EV charging demand.</td>
+    <td>Power-flow feasibility, voltage/security violations, contingency robustness, cost/flexibility tradeoffs.</td>
+  </tr>
+  <tr>
+    <td>BatteryLife</td>
+    <td>Battery future-capacity, SOH/RUL, uncertainty, and degradation-aware dispatch features.</td>
+    <td>SOH/RUL error, uncertainty calibration, degradation-risk violation, dispatch value, lifetime impact.</td>
+  </tr>
+  <tr>
+    <td>CollaborativeEnergy</td>
+    <td>Privacy-preserving coordination among vehicles, charging stations, storage assets, and aggregators.</td>
+    <td>Local constraint satisfaction, privacy-aware performance, robustness to bad data, fairness/resource-use balance.</td>
+  </tr>
+</table>
+
+<h2>Planned release sequence</h2>
+
+<ul>
+  <li><strong>v0.1:</strong> static task definition, sample data, evaluation script, baseline table, and documentation.</li>
+  <li><strong>v0.2:</strong> public/synthetic grid scenarios, public battery-data pipeline, and first reproducible leaderboard.</li>
+  <li><strong>v1.0:</strong> stable benchmark version with versioned datasets, baselines, submission protocol, citation, and governance policy.</li>
+</ul>
+
+<h2>Repository</h2>
+<p>
+The benchmark repository will contain code, sample data, documentation, issue templates, contribution guidelines,
+citation metadata, and GitHub Actions workflows for validating submissions.
+</p>
+
+<p><a href="https://github.com/YOUR_GITHUB_USERNAME/TrustEnergyBench">GitHub repository placeholder →</a></p>
+
+</main>
+<footer>
+  © Tianjing Wang. Replace placeholder links before public release. Last updated: 2026.
+</footer>
+</body>
+</html>
