@@ -1,15 +1,14 @@
 # Tianjing Wang academic website
 
-This is a static GitHub Pages website scaffold.
+This static GitHub Pages website highlights three research pillars:
+
+1. Safe grid operation
+2. Life-aware battery intelligence
+3. Data-center energy intelligence
 
 ## Setup
 
-1. Rename this folder/repository to `YOUR_GITHUB_USERNAME.github.io`.
-2. Replace all `YOUR_GITHUB_USERNAME`, `YOUR_GOOGLE_SCHOLAR_URL`, and `YOUR_ORCID_URL` placeholders.
-3. Add a public CV PDF at `assets/Tianjing_Wang_CV_public.pdf`.
-4. Push to GitHub.
-5. In repository settings, enable GitHub Pages from the main branch if it is not enabled automatically.
-
-## Privacy note
-
-Do not publish a CV with date of birth, nationality, private phone numbers, home address, or sensitive personal identifiers.
+1. Replace `YOUR_GITHUB_USERNAME`, `YOUR_GOOGLE_SCHOLAR_URL`, and `YOUR_ORCID_URL`.
+2. Add a public CV PDF at `assets/Tianjing_Wang_CV_public.pdf`.
+3. Push these files to the root of `YOUR_GITHUB_USERNAME.github.io`.
+4. In repository settings, enable GitHub Pages from the main branch and root folder if needed.

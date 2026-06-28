@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Benchmark | Tianjing Wang</title>
-  <meta name="description" content="Tianjing Wang — physics-guided AI for power systems, battery intelligence, and trustworthy energy systems.">
+  <meta name="description" content="Tianjing Wang — physics-guided AI for power systems, battery intelligence, and data-center energy systems.">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -29,15 +29,17 @@
 </div>
 
 <p>
-TrustEnergyBench evaluates whether AI systems for energy forecasting, emergency control, and storage dispatch can remain
-accurate, physically feasible, robust, privacy-aware, and life-aware under realistic stress conditions.
+TrustEnergyBench evaluates whether AI systems for energy forecasting, emergency control, storage dispatch, and data-center
+energy coordination can remain accurate, physically feasible, robust, uncertainty-aware, and life-aware under realistic stress conditions.
 </p>
 
 <h2>Why this benchmark?</h2>
 <p>
 Purely data-driven energy-AI models can produce outputs that violate power-flow equations, voltage/security limits,
-battery SOC/SOH boundaries, or degradation-risk budgets when operating conditions shift. TrustEnergyBench is designed
-to make those failure modes measurable, reproducible, and comparable.
+battery SOC/SOH boundaries, degradation-risk budgets, or grid-service constraints when operating conditions shift.
+Meanwhile, AI-driven data centers introduce fast-growing and increasingly flexible computing demand that should be modeled
+jointly with storage, renewable integration, cooling flexibility, and grid constraints rather than treated as fixed load.
+TrustEnergyBench is designed to make these failure modes and flexibility opportunities measurable, reproducible, and comparable.
 </p>
 
 <h2>Initial benchmark tracks</h2>
@@ -59,17 +61,50 @@ to make those failure modes measurable, reproducible, and comparable.
     <td>SOH/RUL error, uncertainty calibration, degradation-risk violation, dispatch value, lifetime impact.</td>
   </tr>
   <tr>
-    <td>CollaborativeEnergy</td>
-    <td>Privacy-preserving coordination among vehicles, charging stations, storage assets, and aggregators.</td>
-    <td>Local constraint satisfaction, privacy-aware performance, robustness to bad data, fairness/resource-use balance.</td>
+    <td>DataCenterFlex</td>
+    <td>Coordinated planning and operation of flexible AI-driven data-center demand, energy storage, renewable supply, and grid interaction under uncertainty.</td>
+    <td>Peak-load reduction, energy cost, renewable utilization, service-quality constraints, storage degradation, grid-stress mitigation, and robustness to demand/price/renewable uncertainty.</td>
   </tr>
 </table>
+
+<h2>DataCenterFlex: evaluation design</h2>
+<div class="card-grid">
+  <section class="card">
+    <h3>Inputs</h3>
+    <ul>
+      <li>Data-center workload and demand scenarios</li>
+      <li>Renewable generation and electricity price uncertainty</li>
+      <li>On-site or grid-edge battery constraints</li>
+      <li>Cooling/thermal flexibility and service-quality limits</li>
+      <li>Distribution-grid or transmission-interface stress signals</li>
+    </ul>
+  </section>
+  <section class="card">
+    <h3>Outputs</h3>
+    <ul>
+      <li>Workload-shifting or demand-flexibility decisions</li>
+      <li>Battery charge/discharge schedules</li>
+      <li>Grid-support or peak-shaving response</li>
+      <li>Uncertainty-aware risk scores</li>
+    </ul>
+  </section>
+  <section class="card">
+    <h3>Metrics</h3>
+    <ul>
+      <li>Total energy and demand cost</li>
+      <li>Peak-load and grid-stress reduction</li>
+      <li>Renewable utilization and carbon-aware operation</li>
+      <li>Service-quality violation rate</li>
+      <li>Battery degradation and lifetime impact</li>
+    </ul>
+  </section>
+</div>
 
 <h2>Planned release sequence</h2>
 
 <ul>
   <li><strong>v0.1:</strong> static task definition, sample data, evaluation script, baseline table, and documentation.</li>
-  <li><strong>v0.2:</strong> public/synthetic grid scenarios, public battery-data pipeline, and first reproducible leaderboard.</li>
+  <li><strong>v0.2:</strong> public/synthetic grid-battery-data-center scenarios, public battery-data pipeline, and first reproducible leaderboard.</li>
   <li><strong>v1.0:</strong> stable benchmark version with versioned datasets, baselines, submission protocol, citation, and governance policy.</li>
 </ul>
 

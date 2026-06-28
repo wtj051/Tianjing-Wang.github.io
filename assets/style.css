@@ -4,6 +4,8 @@
   --text: #222;
   --muted: #555;
   --light: #f7f7f7;
+  --lighter: #fbfbfb;
+  --accent: #1f2937;
 }
 
 * {
@@ -21,6 +23,9 @@ body {
 header {
   border-bottom: 1px solid var(--border);
   background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 nav {
@@ -52,20 +57,30 @@ main {
 .hero {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 18px;
+  gap: 14px;
   padding: 30px 0 26px;
 }
 
 .hero h1 {
   margin: 0;
-  font-size: 42px;
-  line-height: 1.1;
+  font-size: 44px;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
 }
 
 .hero .subtitle {
   font-size: 20px;
   color: var(--muted);
-  max-width: 850px;
+  max-width: 900px;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 700;
 }
 
 .card-grid {
@@ -86,8 +101,17 @@ main {
   margin-top: 0;
 }
 
+.accent-card {
+  background: var(--lighter);
+  border-color: #d8d8d8;
+}
+
+.wide-card {
+  margin: 24px 0;
+}
+
 .callout {
-  border-left: 4px solid #333;
+  border-left: 4px solid var(--accent);
   background: var(--light);
   padding: 16px 20px;
   margin: 24px 0;
@@ -113,6 +137,23 @@ main {
   background: var(--light);
 }
 
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0;
+}
+
+.tag {
+  display: inline-block;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 4px 10px;
+  background: var(--light);
+  font-size: 14px;
+  font-weight: 600;
+}
+
 table {
   border-collapse: collapse;
   width: 100%;
@@ -124,6 +165,18 @@ th, td {
   padding: 8px 10px;
   text-align: left;
   vertical-align: top;
+}
+
+th {
+  background: var(--light);
+}
+
+pre {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  background: var(--light);
+  overflow-x: auto;
 }
 
 footer {
@@ -139,6 +192,11 @@ code {
   background: var(--light);
   padding: 2px 5px;
   border-radius: 4px;
+}
+
+pre code {
+  padding: 0;
+  background: transparent;
 }
 
 @media (min-width: 760px) {
