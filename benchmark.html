@@ -4,121 +4,202 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Benchmark | Tianjing Wang</title>
-  <meta name="description" content="Tianjing Wang — physics-guided AI for power systems, battery intelligence, and data-center energy systems.">
+  <meta name="description" content="TrustEnergyBench — public benchmark for trustworthy AI in grid-battery-data-center energy systems.">
   <link rel="stylesheet" href="assets/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tianjing Wang",
+    "url": "https://wtj051.github.io",
+    "sameAs": ["https://github.com/wtj051", "https://scholar.google.com/citations?user=DVHZsDcAAAAJ&hl=en&oi=ao", "https://orcid.org/0000-0003-1019-0197"],
+    "jobTitle": "Postdoctoral Research Fellow",
+    "affiliation": {"@type": "Organization", "name": "Cornell University"},
+    "knowsAbout": ["Power systems", "Smart grids", "Battery intelligence", "Data-center energy systems", "Physics-guided AI", "Energy storage"]
+  }
+  </script>
 </head>
 <body>
-<header>
-<nav>
-  <a href="index.html"><strong>Tianjing Wang</strong></a>
-  <a href="research.html">Research</a>
-  <a href="benchmark.html">Benchmark</a>
-  <a href="publications.html">Publications</a>
-  <a href="teaching.html">Teaching</a>
-  <a href="mentoring-service.html">Mentoring & Service</a>
-  <a href="cv.html">CV</a>
-  <a href="contact.html">Contact</a>
-</nav>
+<header class="site-header">
+  <nav class="navbar" aria-label="Main navigation">
+    <a class="brand" href="index.html" aria-label="Tianjing Wang homepage">
+      <span class="brand-mark">TW</span>
+      <span class="brand-text">Tianjing Wang</span>
+    </a>
+    <div class="nav-links">
+      <a href="research.html">Research</a>
+      <a href="benchmark.html">Benchmark</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="mentoring-service.html">Mentoring &amp; Service</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
 </header>
 <main>
 
-<h1>TrustEnergyBench</h1>
+<section class="page-hero benchmark-hero">
+  <p class="eyebrow">Benchmark</p>
+  <h1>TrustEnergyBench</h1>
+  <p class="page-lead">
+    A public benchmark for evaluating trustworthy AI agents and physics-guided foundation-model components in critical energy systems.
+  </p>
+  <div class="button-row">
+    <a class="button primary" href="https://github.com/wtj051/TrustEnergyBench">GitHub repository</a>
+    <a class="button" href="#tracks">Benchmark tracks</a>
+    <a class="button" href="#release-roadmap">Release roadmap</a>
+  </div>
+</section>
 
-<div class="callout">
-  A public benchmark for trustworthy AI agents and physics-guided foundation-model components in critical energy systems.
-</div>
+<section class="callout large-callout">
+  <strong>Benchmark thesis.</strong> Energy AI should be evaluated not only by prediction accuracy, but also by physical feasibility, constraint violations, uncertainty stress tests, battery lifetime impact, grid-service value, and reproducibility.
+</section>
 
-<p>
-TrustEnergyBench evaluates whether AI systems for energy forecasting, emergency control, storage dispatch, and data-center
-energy coordination can remain accurate, physically feasible, robust, uncertainty-aware, and life-aware under realistic stress conditions.
-</p>
+<section class="section-block">
+  <div class="section-heading">
+    <p class="eyebrow">Why this benchmark?</p>
+    <h2>Making failure modes measurable</h2>
+    <p>
+      Purely data-driven energy-AI models can violate power-flow equations, voltage/security limits, SOC/SOH boundaries, degradation-risk budgets, and grid-service constraints under distribution shift. At the same time, AI-driven data centers introduce fast-growing flexible demand that should be modeled jointly with storage, cooling, renewable supply, and grid constraints.
+    </p>
+  </div>
+  <div class="principle-grid">
+    <div><strong>01</strong><span>Physical feasibility</span></div>
+    <div><strong>02</strong><span>Life-aware operation</span></div>
+    <div><strong>03</strong><span>Uncertainty robustness</span></div>
+    <div><strong>04</strong><span>Reproducibility</span></div>
+  </div>
+</section>
 
-<h2>Why this benchmark?</h2>
-<p>
-Purely data-driven energy-AI models can produce outputs that violate power-flow equations, voltage/security limits,
-battery SOC/SOH boundaries, degradation-risk budgets, or grid-service constraints when operating conditions shift.
-Meanwhile, AI-driven data centers introduce fast-growing and increasingly flexible computing demand that should be modeled
-jointly with storage, renewable integration, cooling flexibility, and grid constraints rather than treated as fixed load.
-TrustEnergyBench is designed to make these failure modes and flexibility opportunities measurable, reproducible, and comparable.
-</p>
+<section class="section-block" id="tracks">
+  <div class="section-heading">
+    <p class="eyebrow">Initial tracks</p>
+    <h2>Three benchmark tracks aligned with the research program</h2>
+  </div>
 
-<h2>Initial benchmark tracks</h2>
+  <div class="benchmark-track" id="safeflex">
+    <div class="track-heading">
+      <span>Track A</span>
+      <h3>SafeFlex</h3>
+    </div>
+    <p>Dynamic storage flexibility and safe grid operation under contingencies, renewable uncertainty, and EV charging demand.</p>
+    <div class="metric-tags">
+      <span>Power-flow feasibility</span>
+      <span>Voltage/security violations</span>
+      <span>Contingency robustness</span>
+      <span>Cost/flexibility tradeoffs</span>
+    </div>
+  </div>
 
-<table>
-  <tr>
-    <th>Track</th>
-    <th>Task</th>
-    <th>Evaluation focus</th>
-  </tr>
-  <tr>
-    <td>SafeFlex</td>
-    <td>Dynamic storage flexibility and safe grid operation under contingencies, renewable uncertainty, and EV charging demand.</td>
-    <td>Power-flow feasibility, voltage/security violations, contingency robustness, cost/flexibility tradeoffs.</td>
-  </tr>
-  <tr>
-    <td>BatteryLife</td>
-    <td>Battery future-capacity, SOH/RUL, uncertainty, and degradation-aware dispatch features.</td>
-    <td>SOH/RUL error, uncertainty calibration, degradation-risk violation, dispatch value, lifetime impact.</td>
-  </tr>
-  <tr>
-    <td>DataCenterFlex</td>
-    <td>Coordinated planning and operation of flexible AI-driven data-center demand, energy storage, renewable supply, and grid interaction under uncertainty.</td>
-    <td>Peak-load reduction, energy cost, renewable utilization, service-quality constraints, storage degradation, grid-stress mitigation, and robustness to demand/price/renewable uncertainty.</td>
-  </tr>
-</table>
+  <div class="benchmark-track" id="batterylife">
+    <div class="track-heading">
+      <span>Track B</span>
+      <h3>BatteryLife</h3>
+    </div>
+    <p>Battery future-capacity, SOH/RUL, uncertainty, and degradation-aware dispatch features.</p>
+    <div class="metric-tags">
+      <span>SOH/RUL error</span>
+      <span>Uncertainty calibration</span>
+      <span>Degradation risk</span>
+      <span>Lifetime impact</span>
+    </div>
+  </div>
 
-<h2>DataCenterFlex: evaluation design</h2>
-<div class="card-grid">
-  <section class="card">
-    <h3>Inputs</h3>
-    <ul>
-      <li>Data-center workload and demand scenarios</li>
-      <li>Renewable generation and electricity price uncertainty</li>
-      <li>On-site or grid-edge battery constraints</li>
-      <li>Cooling/thermal flexibility and service-quality limits</li>
-      <li>Distribution-grid or transmission-interface stress signals</li>
-    </ul>
-  </section>
-  <section class="card">
-    <h3>Outputs</h3>
-    <ul>
-      <li>Workload-shifting or demand-flexibility decisions</li>
-      <li>Battery charge/discharge schedules</li>
-      <li>Grid-support or peak-shaving response</li>
-      <li>Uncertainty-aware risk scores</li>
-    </ul>
-  </section>
-  <section class="card">
-    <h3>Metrics</h3>
-    <ul>
-      <li>Total energy and demand cost</li>
-      <li>Peak-load and grid-stress reduction</li>
-      <li>Renewable utilization and carbon-aware operation</li>
-      <li>Service-quality violation rate</li>
-      <li>Battery degradation and lifetime impact</li>
-    </ul>
-  </section>
-</div>
+  <div class="benchmark-track highlight-track" id="datacenterflex">
+    <div class="track-heading">
+      <span>Track C</span>
+      <h3>DataCenterFlex</h3>
+    </div>
+    <p>Coordinated planning and operation of flexible AI-driven data-center demand, energy storage, renewable supply, cooling flexibility, and grid interaction under uncertainty.</p>
+    <div class="metric-tags">
+      <span>Peak-load reduction</span>
+      <span>Energy cost</span>
+      <span>Renewable utilization</span>
+      <span>Service-quality constraints</span>
+      <span>Storage degradation</span>
+      <span>Grid-stress mitigation</span>
+    </div>
+  </div>
+</section>
 
-<h2>Planned release sequence</h2>
+<section class="section-block">
+  <div class="section-heading">
+    <p class="eyebrow">DataCenterFlex design</p>
+    <h2>From exogenous load to flexible computing-energy coordination</h2>
+  </div>
+  <div class="card-grid three">
+    <section class="card glass-card">
+      <h3>Inputs</h3>
+      <ul>
+        <li>AI workload and computing-demand scenarios</li>
+        <li>Electricity price and renewable uncertainty</li>
+        <li>On-site or grid-edge battery constraints</li>
+        <li>Cooling/thermal flexibility and service-quality limits</li>
+        <li>Grid-stress or interconnection signals</li>
+      </ul>
+    </section>
+    <section class="card glass-card">
+      <h3>Outputs</h3>
+      <ul>
+        <li>Workload-shifting or demand-flexibility decisions</li>
+        <li>Battery charge/discharge schedules</li>
+        <li>Peak-shaving or grid-support responses</li>
+        <li>Risk scores under uncertainty</li>
+      </ul>
+    </section>
+    <section class="card glass-card">
+      <h3>Metrics</h3>
+      <ul>
+        <li>Total energy and demand cost</li>
+        <li>Peak-load and grid-stress reduction</li>
+        <li>Renewable utilization and carbon-aware operation</li>
+        <li>Service-quality violation rate</li>
+        <li>Battery degradation and lifetime impact</li>
+      </ul>
+    </section>
+  </div>
+</section>
 
-<ul>
-  <li><strong>v0.1:</strong> static task definition, sample data, evaluation script, baseline table, and documentation.</li>
-  <li><strong>v0.2:</strong> public/synthetic grid-battery-data-center scenarios, public battery-data pipeline, and first reproducible leaderboard.</li>
-  <li><strong>v1.0:</strong> stable benchmark version with versioned datasets, baselines, submission protocol, citation, and governance policy.</li>
-</ul>
-
-<h2>Repository</h2>
-<p>
-The benchmark repository will contain code, sample data, documentation, issue templates, contribution guidelines,
-citation metadata, and GitHub Actions workflows for validating submissions.
-</p>
-
-<p><a href="https://github.com/wtj051/TrustEnergyBench">GitHub repository placeholder →</a></p>
+<section class="section-block" id="release-roadmap">
+  <div class="section-heading">
+    <p class="eyebrow">Release roadmap</p>
+    <h2>Practical path to a public research artifact</h2>
+  </div>
+  <div class="timeline release-timeline">
+    <div class="timeline-item">
+      <span>v0.1</span>
+      <h3>Task definitions</h3>
+      <p>Static task design, sample data, documentation, evaluation script, and baseline table.</p>
+    </div>
+    <div class="timeline-item">
+      <span>v0.2</span>
+      <h3>First reproducible benchmark</h3>
+      <p>Public/synthetic grid-battery-data-center scenarios, battery-data pipeline, and initial leaderboard.</p>
+    </div>
+    <div class="timeline-item">
+      <span>v1.0</span>
+      <h3>Stable public release</h3>
+      <p>Versioned datasets, baselines, submission protocol, citation metadata, governance, and reproducibility checklist.</p>
+    </div>
+  </div>
+</section>
 
 </main>
-<footer>
-  © Tianjing Wang. Last updated: 2026.
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <strong>Tianjing Wang</strong><br>
+      Physics-guided AI for power grids, battery intelligence, and data-center energy systems.
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/wtj051">GitHub</a>
+      <a href="https://scholar.google.com/citations?user=DVHZsDcAAAAJ&hl=en&oi=ao">Google Scholar</a>
+      <a href="https://orcid.org/0000-0003-1019-0197">ORCID</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <p class="footer-note">© Tianjing Wang. Last updated: 2026.</p>
 </footer>
 </body>
 </html>

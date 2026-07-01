@@ -1,14 +1,23 @@
 # Tianjing Wang academic website
 
-This static GitHub Pages website highlights three research pillars:
+This repository contains the GitHub Pages website for `wtj051.github.io`.
 
-1. Safe grid operation
-2. Life-aware battery intelligence
-3. Data-center energy intelligence
+Website: https://wtj051.github.io
 
-## Setup
+## Pages
 
-1. GitHub username has already been updated to `wtj051`. GitHub username, Google Scholar, and ORCID links have already been updated.
-2. Add a public CV PDF at `assets/Tianjing_Wang_CV_public.pdf`.
-3. Push these files to the root of `wtj051.github.io`.
-4. In repository settings, enable GitHub Pages from the main branch and root folder if needed.
+- `index.html` — homepage with polished research overview.
+- `research.html` — detailed research program.
+- `benchmark.html` — TrustEnergyBench overview.
+- `publications.html` — selected publications by theme.
+- `teaching.html` — teaching philosophy and course modules.
+- `mentoring-service.html` — mentoring model and service.
+- `cv.html` — public CV page.
+- `contact.html` — contact links and prospective student guidance.
+
+## Notes
+
+- Keep `index.html` in the repository root.
+- Keep `assets/style.css` in the `assets/` folder.
+- Place the public CV PDF at `assets/Tianjing_Wang_CV_public.pdf`.
+- Do not publish private phone numbers, home address, date of birth, nationality, visa/passport information, or school-specific application materials.

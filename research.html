@@ -6,115 +6,216 @@
   <title>Research | Tianjing Wang</title>
   <meta name="description" content="Tianjing Wang — physics-guided AI for power systems, battery intelligence, and data-center energy systems.">
   <link rel="stylesheet" href="assets/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tianjing Wang",
+    "url": "https://wtj051.github.io",
+    "sameAs": ["https://github.com/wtj051", "https://scholar.google.com/citations?user=DVHZsDcAAAAJ&hl=en&oi=ao", "https://orcid.org/0000-0003-1019-0197"],
+    "jobTitle": "Postdoctoral Research Fellow",
+    "affiliation": {"@type": "Organization", "name": "Cornell University"},
+    "knowsAbout": ["Power systems", "Smart grids", "Battery intelligence", "Data-center energy systems", "Physics-guided AI", "Energy storage"]
+  }
+  </script>
 </head>
 <body>
-<header>
-<nav>
-  <a href="index.html"><strong>Tianjing Wang</strong></a>
-  <a href="research.html">Research</a>
-  <a href="benchmark.html">Benchmark</a>
-  <a href="publications.html">Publications</a>
-  <a href="teaching.html">Teaching</a>
-  <a href="mentoring-service.html">Mentoring & Service</a>
-  <a href="cv.html">CV</a>
-  <a href="contact.html">Contact</a>
-</nav>
+<header class="site-header">
+  <nav class="navbar" aria-label="Main navigation">
+    <a class="brand" href="index.html" aria-label="Tianjing Wang homepage">
+      <span class="brand-mark">TW</span>
+      <span class="brand-text">Tianjing Wang</span>
+    </a>
+    <div class="nav-links">
+      <a href="research.html">Research</a>
+      <a href="benchmark.html">Benchmark</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="mentoring-service.html">Mentoring &amp; Service</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
 </header>
 <main>
 
-<h1>Research</h1>
+<section class="page-hero">
+  <p class="eyebrow">Research</p>
+  <h1>Trustworthy AI for grid-battery-data-center systems</h1>
+  <p class="page-lead">
+    My research develops physics-guided AI and optimization methods for energy systems where decisions must be fast, data-driven, and physically accountable. The central question is how AI can support clean-energy infrastructure while respecting feasibility, safety, device health, uncertainty, and operational accountability.
+  </p>
+</section>
 
-<p>
-My research develops trustworthy, physics-guided AI for power systems, battery intelligence, energy storage,
-data-center energy systems, and grid-battery-computing coordination. The central question is:
-</p>
+<section class="callout large-callout">
+  <strong>Central research question.</strong> How can AI make reliable decisions for clean-energy infrastructure when grid physics, battery degradation, flexible computing demand, uncertainty, and real-time operational constraints interact?
+</section>
 
-<div class="callout">
-  How can AI make fast decisions for clean-energy infrastructure while respecting physical feasibility,
-  device health, flexible computing demand, privacy, uncertainty, and operational accountability?
-</div>
+<section class="section-block">
+  <div class="section-heading">
+    <p class="eyebrow">Research map</p>
+    <h2>One program, three complementary pillars</h2>
+  </div>
+  <div class="matrix-grid">
+    <div class="matrix-card">
+      <h3>Safe grid operation</h3>
+      <p><strong>System:</strong> transmission/distribution grids, renewable generation, EV demand, storage.</p>
+      <p><strong>Question:</strong> How can learning-based control remain feasible under stress?</p>
+      <p><strong>Artifact:</strong> SafeFlex track and safety-aware control baselines.</p>
+    </div>
+    <div class="matrix-card">
+      <h3>Life-aware battery intelligence</h3>
+      <p><strong>System:</strong> grid-edge storage, EV batteries, data-center batteries, BMS data.</p>
+      <p><strong>Question:</strong> How can health prediction become operational value?</p>
+      <p><strong>Artifact:</strong> BatteryLife track and health-to-dispatch toolbox.</p>
+    </div>
+    <div class="matrix-card">
+      <h3>Data-center energy intelligence</h3>
+      <p><strong>System:</strong> AI-computing demand, storage, cooling, renewables, grid interface.</p>
+      <p><strong>Question:</strong> How can flexible computing become a grid-aware energy resource?</p>
+      <p><strong>Artifact:</strong> DataCenterFlex track and multi-timescale planning testbed.</p>
+    </div>
+  </div>
+</section>
 
-<h2>Theme 1: Physics-trustworthy AI for safe grid operation</h2>
-<p>
-I develop AI methods that embed power-system constraints into learning and control models, including power balance,
-power-flow solvability, voltage/security limits, transient stability, dispatch rules, and expert knowledge.
-</p>
+<section class="research-theme" id="safe-grid-operation">
+  <div class="theme-header grid-theme">
+    <span class="theme-index">01</span>
+    <div>
+      <p class="eyebrow">Pillar 01</p>
+      <h2>Physics-trustworthy AI for safe grid operation</h2>
+    </div>
+  </div>
+  <div class="theme-content">
+    <p>
+      Modern power grids increasingly operate near dynamic limits because of renewable variability, EV charging, distributed energy resources, and extreme events. My work develops AI methods that embed power-system constraints into learning and control models rather than treating physical feasibility as an afterthought.
+    </p>
+    <div class="two-col">
+      <div>
+        <h3>Technical signature</h3>
+        <ul class="check-list">
+          <li>Power-flow-aware learning and feasibility restoration.</li>
+          <li>Graph and time-series models for grid topology, states, and contingencies.</li>
+          <li>Safe reinforcement learning for emergency voltage control and redispatch.</li>
+          <li>Knowledge-guided models that combine operator logic with data-driven adaptation.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Evaluation background</h3>
+        <p>
+          Average error is not enough for grid operation. A useful model should be evaluated by voltage/security violations, power-flow solvability, contingency robustness, runtime, and ability to generalize across grid conditions.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<p><strong>Representative directions:</strong></p>
-<ul>
-  <li>Graph/time-series reinforcement learning for power-flow solvability restoration.</li>
-  <li>Transfer reinforcement learning for security-constrained redispatch across heterogeneous grids.</li>
-  <li>Topology-aware and knowledge-informed emergency-control models.</li>
-  <li>Physics-based safety metrics for AI agents and energy foundation models.</li>
-</ul>
+<section class="research-theme" id="life-aware-battery-intelligence">
+  <div class="theme-header battery-theme">
+    <span class="theme-index">02</span>
+    <div>
+      <p class="eyebrow">Pillar 02</p>
+      <h2>Life-aware battery intelligence</h2>
+    </div>
+  </div>
+  <div class="theme-content">
+    <p>
+      Battery degradation changes the amount of flexibility that can be safely used. My work connects battery SOH/SOC/RUL and future-capacity estimation with degradation-aware dispatch, grid-edge planning, and operational decision support.
+    </p>
+    <div class="two-col">
+      <div>
+        <h3>Technical signature</h3>
+        <ul class="check-list">
+          <li>Physics-guided deep learning for future capacity and remaining useful life.</li>
+          <li>Continuous-time and irregular-sampling models for real battery data.</li>
+          <li>Weakly supervised learning under noisy or imprecise health labels.</li>
+          <li>Health-to-dispatch features: safe capacity, power margin, degradation cost, and lifecycle risk.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Evaluation background</h3>
+        <p>
+          Battery models should be evaluated by prediction accuracy, uncertainty calibration, early-life generalization, robustness to heterogeneous aging, and downstream dispatch consequences—not only by curve-fitting quality.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<h2>Theme 2: Life-aware battery intelligence</h2>
-<p>
-Battery health estimates become operationally useful when they are translated into safe capacity, power boundaries,
-efficiency, degradation cost, and dispatch constraints. My work connects SOH/SOC/RUL/future-capacity estimation with
-energy-storage operation and grid-edge decision support.
-</p>
+<section class="research-theme" id="data-center-energy-intelligence">
+  <div class="theme-header datacenter-theme">
+    <span class="theme-index">03</span>
+    <div>
+      <p class="eyebrow">Pillar 03</p>
+      <h2>Data-center energy intelligence</h2>
+    </div>
+  </div>
+  <div class="theme-content">
+    <p>
+      AI computing is rapidly increasing data-center electricity demand, but data centers also contain controllable flexibility: workload scheduling, on-site storage, cooling/thermal inertia, renewable procurement, and demand response. My emerging work studies data centers as grid-interactive energy assets rather than fixed loads.
+    </p>
+    <div class="two-col">
+      <div>
+        <h3>Technical signature</h3>
+        <ul class="check-list">
+          <li>Endogenous modeling of AI-driven computing demand and flexible workload timing.</li>
+          <li>Uncertainty quantification for workload, renewable output, electricity price, and grid stress.</li>
+          <li>Coordinated planning of energy storage and flexible data-center demand.</li>
+          <li>Multi-timescale operation across workload scheduling, battery dispatch, cooling flexibility, and grid-support response.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Evaluation background</h3>
+        <p>
+          Data-center energy AI should be judged by total cost, peak-load reduction, renewable utilization, service-quality violations, storage degradation, thermal feasibility, and robustness under demand and price uncertainty.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<p><strong>Representative directions:</strong></p>
-<ul>
-  <li>Physics-guided deep learning for future capacity and remaining useful life prediction.</li>
-  <li>Continuous-time degradation modeling under irregular sampling and missing data.</li>
-  <li>Weakly supervised SOH estimation under imprecise intervals.</li>
-  <li>Health-to-dispatch battery toolboxes for lifecycle-aware storage flexibility in grid and data-center contexts.</li>
-</ul>
-
-<h2>Theme 3: Data-center energy intelligence</h2>
-<p>
-Rapid growth in AI computing is turning data centers into major, flexible, and uncertainty-sensitive energy assets.
-My emerging research studies how data-center demand, on-site storage, renewable supply, cooling flexibility, and grid constraints
-can be jointly modeled and coordinated without treating computing load as an exogenous fixed demand.
-</p>
-
-<p><strong>Scientific question.</strong> How can data centers become grid-aware flexible resources while maintaining computing service quality,
-reducing peak demand, improving renewable utilization, and respecting battery lifetime and operational constraints?</p>
-
-<p><strong>Representative directions:</strong></p>
-<ul>
-  <li>Endogenous modeling of AI-driven data-center demand and workload flexibility.</li>
-  <li>Learning-based uncertainty quantification for computing load, renewable output, prices, and grid stress.</li>
-  <li>Coordinated planning of energy storage and flexible data-center demand under uncertainty.</li>
-  <li>Multi-timescale coordination across workload scheduling, battery dispatch, cooling/thermal flexibility, and grid-support decisions.</li>
-  <li>System-level evaluation of cost, peak-load reduction, renewable integration, battery degradation, and operational risk.</li>
-</ul>
-
-<h2>Future lab vision: Trustworthy Energy Intelligence Lab</h2>
-<p>
-My future lab will develop physics-guided AI, energy foundation models, and trustworthy decision systems that enable
-power grids, batteries, electric vehicles, data centers, and distributed storage to operate safely, sustainably, and grid-responsively
-under uncertainty.
-</p>
-
-<table>
-  <tr>
-    <th>Pillar</th>
-    <th>Scientific focus</th>
-    <th>Core artifact</th>
-  </tr>
-  <tr>
-    <td>Safe Flexibility</td>
-    <td>Dynamic controllability domains for grid-edge storage and electric mobility.</td>
-    <td>SafeFlex benchmark track.</td>
-  </tr>
-  <tr>
-    <td>Life-Aware Storage</td>
-    <td>Health-safety-value dispatch for batteries across lifecycle stages.</td>
-    <td>BatteryLife benchmark track and health-to-dispatch toolbox.</td>
-  </tr>
-  <tr>
-    <td>Data-Center Flexibility</td>
-    <td>Flexible AI-computing demand, storage planning, cooling/thermal flexibility, and grid-aware operation under uncertainty.</td>
-    <td>DataCenterFlex benchmark track.</td>
-  </tr>
-</table>
+<section class="section-block">
+  <div class="section-heading">
+    <p class="eyebrow">Future lab vision</p>
+    <h2>Trustworthy Energy Intelligence Lab</h2>
+    <p>
+      My future lab will develop physics-guided AI, energy foundation models, uncertainty-aware optimization, and benchmark infrastructure that enable power grids, batteries, electric mobility, data centers, and distributed storage to operate safely and sustainably under uncertainty.
+    </p>
+  </div>
+  <div class="timeline">
+    <div class="timeline-item">
+      <span>Near term</span>
+      <h3>Benchmark and baselines</h3>
+      <p>Release reproducible tasks, sample data, evaluation scripts, baseline models, and versioned leaderboards.</p>
+    </div>
+    <div class="timeline-item">
+      <span>Mid term</span>
+      <h3>Physics-guided energy foundation models</h3>
+      <p>Develop reusable grid-battery-data-center representations that respect constraints and uncertainty.</p>
+    </div>
+    <div class="timeline-item">
+      <span>Long term</span>
+      <h3>Grid-responsive infrastructure intelligence</h3>
+      <p>Translate benchmarked AI methods into safe decision support for critical clean-energy infrastructure.</p>
+    </div>
+  </div>
+</section>
 
 </main>
-<footer>
-  © Tianjing Wang. Last updated: 2026.
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <strong>Tianjing Wang</strong><br>
+      Physics-guided AI for power grids, battery intelligence, and data-center energy systems.
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/wtj051">GitHub</a>
+      <a href="https://scholar.google.com/citations?user=DVHZsDcAAAAJ&hl=en&oi=ao">Google Scholar</a>
+      <a href="https://orcid.org/0000-0003-1019-0197">ORCID</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <p class="footer-note">© Tianjing Wang. Last updated: 2026.</p>
 </footer>
 </body>
 </html>
