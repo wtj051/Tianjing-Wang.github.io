@@ -1,27 +1,29 @@
-# Upload instructions for wtj051.github.io
+# Upload instructions — wtj051.github.io v4
 
-1. Open https://github.com/wtj051/wtj051.github.io
-2. Click `Add file` → `Upload files`.
-3. Upload all root files and the `assets/` folder from this package.
-4. Commit with a message such as `Polish homepage and research pages`.
-5. Wait a few minutes and open https://wtj051.github.io.
-
-Expected root structure:
+1. Unzip the root-files package.
+2. Open your GitHub Pages repository:
 
 ```text
-wtj051.github.io/
-├── assets/
-│   └── style.css
-├── _config.yml
-├── benchmark.html
-├── contact.html
-├── cv.html
-├── index.html
-├── mentoring-service.html
-├── publications.html
-├── README.md
-├── research.html
-└── teaching.html
+https://github.com/wtj051/wtj051.github.io
 ```
 
-If your CV PDF is already in `assets/`, uploading this package will not delete it through the GitHub web uploader. If you are replacing the repository locally with git, keep or re-add `assets/Tianjing_Wang_CV_public.pdf`.
+3. Click:
+
+```text
+Add file → Upload files
+```
+
+4. Upload all files and the `assets/` folder from the unzipped package.
+5. Commit with a message such as:
+
+```text
+Refine high-tech academic website design
+```
+
+6. Wait 1–5 minutes, then check:
+
+```text
+https://wtj051.github.io
+```
+
+Important: do not upload the outer folder itself. The repository root should contain `index.html`, `research.html`, `benchmark.html`, and `assets/style.css` directly.

@@ -1,24 +1,24 @@
-# Change summary — polished website version
+# Change summary — v4
 
-Major updates:
+This version refines the visual system for a more balanced high-tech academic style.
 
-- Redesigned homepage with a stronger academic hero section, research identity panel, and responsive card layout.
-- Expanded the three research pillars with background, technical signature, and research value:
+## Updates
+
+- Reduced the largest title size from the previous oversized hero scale to a more coordinated range.
+- Updated the position title to `Postdoctoral Associate` across all pages and structured data.
+- Added a subtler scientific/technology visual language: light grid background, glass-like cards, refined gradients, smaller hero panel, and more cohesive research-card styling.
+- Improved consistency across research cards, benchmark cards, page heroes, buttons, tags, and section dividers.
+- Kept the three research pillars unchanged:
   - Safe grid operation
   - Life-aware battery intelligence
   - Data-center energy intelligence
-- Added a visual research ecosystem section linking grids, batteries, and data centers.
-- Rebuilt the TrustEnergyBench page around benchmark principles, tracks, DataCenterFlex design, and release roadmap.
-- Reorganized publications by research theme and explicitly framed data-center energy intelligence as an emerging extension of existing work.
-- Improved Teaching, Mentoring & Service, CV, and Contact pages with more polished layout and clearer faculty-market positioning.
-- Rewrote `assets/style.css` with a modern responsive design, sticky navigation, gradient hero sections, cards, tags, timelines, and mobile support.
 
-Previous third pillar has been fully replaced across the website.
+## Upload target
 
-Current third pillar:
+Upload the root files directly to:
 
-- Data-center energy intelligence
+```text
+https://github.com/wtj051/wtj051.github.io
+```
 
-Current benchmark track:
-
-- DataCenterFlex
+The `index.html` file and `assets/` folder should remain in the repository root.
